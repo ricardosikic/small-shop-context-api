@@ -13,6 +13,7 @@ export class AppProvider extends React.Component {
           // arrays
           listItem: [],
           carroItem: [],
+          planetItem: [],
           //eventos
           openModal: this.openModal,
           closeModal: this.closeModal,
@@ -23,6 +24,7 @@ export class AppProvider extends React.Component {
   
   componentDidMount() {
       this.getInfo();
+      this.getPlanet();
   }
 
   getInfo = () => {
@@ -37,6 +39,20 @@ export class AppProvider extends React.Component {
               listItem: data.results
           })
       })
+  }
+
+  getPlanet = () => {
+    fetch('https://swapi.co/api/planets/')
+    .then(resp => {
+        console.log(resp.status);
+        return resp.json();
+    })
+    .then(data => {
+        console.log('valor data planeta: ', data);
+        this.setState({
+            planetItem: data.results
+        })
+    })
   }
 
   openModal = (e) => {
