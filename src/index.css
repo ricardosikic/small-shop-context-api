@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.btn-success {
+  color: #fff !important;
+}
+
+.btn-success:hover {
+  color: #fff !important;
+}

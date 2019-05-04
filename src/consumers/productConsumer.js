@@ -1,5 +1,6 @@
 import React from 'react';
 import { Contexto } from '../context/context';
+import { Link } from 'react-router-dom';
 
 export class ProductConsumer extends React.Component {
     render() {
@@ -13,7 +14,7 @@ export class ProductConsumer extends React.Component {
                                     <h5 className="card-title">Nombre: {item.name}</h5>
                                     <p className="card-text">Color de ojos: {item.eye_color}</p>
                                     <a href="/" onClick={e => c.addItem(e, i)} className="btn btn-primary"><i className="fas fa-heart"></i></a>
-                                    <button className="btn btn-success" style={{marginLeft: '10px'}}>ver mas</button> 
+                                    <button className="btn btn-success" style={{marginLeft: '10px'}}><Link to={'/single/' + (i + 1)}>ver mas</Link></button> 
                                 </div>
                             </div>
                         );

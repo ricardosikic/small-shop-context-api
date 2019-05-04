@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.btn-success {
+  color: #fff !important;
+}
+
+.btn-success a {
+  color: #fff !important;
+}

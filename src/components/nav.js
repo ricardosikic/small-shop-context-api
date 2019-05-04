@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import { Productos } from '../pages/productos';
 import { Contact } from '../pages/contact';
+import { SinglePage } from '../pages/single';
 import { CarritoConsumer } from '../consumers/carritoConsumer';
 
 export const NavBar = () => {
@@ -30,6 +31,7 @@ export const NavBar = () => {
             <Switch>
                 <Route exact path='/productos' component= {Productos} />
                 <Route exact path='/productos' component= {Productos} />
+                <Route exact path='/single/:i' component= {SinglePage} />
                 <Route exact path='/contacto' component= {Contact} />
             </Switch>
         </Fragment>
