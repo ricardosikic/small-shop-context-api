@@ -26,6 +26,8 @@ export class SinglePage extends React.Component {
             })
         })
     }
+
+
     render() {
         return(
             <div>

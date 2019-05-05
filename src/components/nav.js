@@ -3,6 +3,7 @@ import { Link, Switch, Route } from 'react-router-dom';
 import { Productos } from '../pages/productos';
 import { Contact } from '../pages/contact';
 import { SinglePage } from '../pages/single';
+import { SinglePlanet } from '../pages/singleplanet';
 import { CarritoConsumer } from '../consumers/carritoConsumer';
 
 export const NavBar = () => {
@@ -32,6 +33,7 @@ export const NavBar = () => {
                 <Route exact path='/productos' component= {Productos} />
                 <Route exact path='/productos' component= {Productos} />
                 <Route exact path='/single/:i' component= {SinglePage} />
+                <Route exact path='/singleplanet/:i' component= {SinglePlanet} />
                 <Route exact path='/contacto' component= {Contact} />
             </Switch>
         </Fragment>
