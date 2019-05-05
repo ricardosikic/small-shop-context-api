@@ -13,7 +13,7 @@ export class PlanetConsumer extends React.Component {
                                 <div className="card-body">
                                     <h5 className="card-title">Nombre: {item.name}</h5>
                                     <p className="card-text">Clima: {item.climate}</p>
-                                    <a href="/" onClick={e => c.addItem(e, i)} className="btn btn-primary"><i className="fas fa-heart"></i></a>
+                                    <a href="/" onClick={e => c.addPlanet(e, i)} className="btn btn-primary"><i className="fas fa-heart"></i></a>
                                     <button className="btn btn-success" style={{marginLeft: '10px'}}><Link to={'/singleplanet/' + (i + 1)}>ver mas</Link></button> 
                                 </div>
                             </div>

@@ -15,6 +15,7 @@ export class ModalFeed extends React.Component {
                     })
                 }}
             </Contexto.Consumer>
+            
         );
     }
 }

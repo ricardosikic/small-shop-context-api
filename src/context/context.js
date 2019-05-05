@@ -18,6 +18,7 @@ export class AppProvider extends React.Component {
           openModal: this.openModal,
           closeModal: this.closeModal,
           addItem: this.addItem,
+          addPlanet: this.addPlanet,
           deleteItem: this.deleteItem
       }
   }
@@ -75,10 +76,17 @@ export class AppProvider extends React.Component {
       e.preventDefault();
       const elemento = this.state.listItem[i];
       this.setState({
-          carroItem: this.state.carroItem.concat(elemento.name)
-      })      
-      console.log('carro: ', this.state.carroItem);
+        carroItem: this.state.carroItem.concat(elemento.name)
+      })
   }
+  addPlanet = (e, i) =>{
+    e.preventDefault();
+    const planeta = this.state.planetItem[i];
+    this.setState({
+      carroItem: this.state.carroItem.concat(planeta.name)
+    })
+  }
+
 
   deleteItem = (i, e) => {
       e.preventDefault();
